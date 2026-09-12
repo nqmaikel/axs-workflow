@@ -1,3 +1,7 @@
+![AXS Workflow project cover](assets/showcase/cover.png)
+
+*Concept illustration created for this showcase.*
+
 <div align="center">
 
 <h1>AXS Workflow</h1>
@@ -24,11 +28,26 @@ Its documented scope follows the transition from an event page to a ticket listi
 - A local dashboard component.
 - A manual handoff for final checkout completion.
 
+## Visual overview
+
+![AXS Workflow feature overview](assets/showcase/overview.png)
+
 ## High-level workflow
 
-Start with a selected event, inspect the available listing workflow and prepare a ticket selection. The browser remains available for the user to review the result and complete the final checkout manually.
+```mermaid
+flowchart LR
+    A["Selected event"] --> B["Browse ticket listings"]
+    B --> C["Choose listing and quantity"]
+    C --> D["User review"]
+    D --> E["Manual checkout"]
 
-The documented behavior distinguishes the browsing and selection stages from the final purchase decision.
+    classDef stage fill:#f1f5f9,stroke:#64748b,color:#0f172a
+    classDef manual fill:#fef3c7,stroke:#d97706,color:#78350f
+    class A,B,C stage
+    class D,E manual
+```
+
+The browser remains available for the user to review the selection and complete final checkout manually.
 
 ## Stack
 
@@ -40,6 +59,6 @@ Local prototype focused on event browsing and ticket selection, with user-contro
 
 ## About this repository
 
-This repository is a public showcase. Source code, account information and operational configuration remain private; only this English project overview is published.
+This repository is a public showcase. Only presentation material is published; source code and private data remain private.
 
 **Last showcase review:** 2026-09-12 (Europe/Paris).
