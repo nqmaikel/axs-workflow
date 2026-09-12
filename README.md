@@ -11,7 +11,13 @@ Configure an event, start a browser worker, follow its progress and take over th
 ![Camoufox](https://img.shields.io/badge/Camoufox-browser_automation-6B4EFF)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
+![AXS process-control panel in an isolated empty state](assets/showcase/screenshot-control-demo.jpg)
+
+*Actual Control tab captured on 12 September 2026. The worker is stopped and its output area is empty.*
+
 </div>
+
+The screenshots show the unchanged local dashboard running in an isolated empty workspace. No browser workers were started, and no account data, proxy records or existing operational logs were used for these captures.
 
 ## What it does
 
@@ -30,6 +36,22 @@ The browser workflow distinguishes primary ticket sales from resale listings. It
 | **Checkout handoff** | Continue in the existing browser session to review and finish the purchase manually. |
 
 Starting the control panel and starting a worker are separate actions. Loading the page renders the interface and begins status polling; the worker starts only after an explicit Start action.
+
+### Event and ticket settings
+
+The Event / Tickets tab groups the event address and selection controls in one place. The source implements ticket quantity, best-available and seat-map selection paths, including a preferred section where the ticket interface supports it.
+
+![AXS event and ticket settings](assets/showcase/screenshot-event-settings-demo.jpg)
+
+*Actual Event / Tickets tab in the isolated workspace. The event field shows its built-in example placeholder; no event was opened. Row and maximum-price controls are visible in the interface, but their enforcement was not established by the source review.*
+
+### Grouped-session monitoring
+
+A separate tab organizes grouped-session status and output. Its table has columns for the method, source, state and latest message, alongside operational account/network fields. The capture contains no session rows or identifying values.
+
+![AXS grouped-session monitor with no active sessions](assets/showcase/screenshot-sessions-demo.jpg)
+
+*Actual grouped-session tab, stopped with an empty session table and log. The capture demonstrates the monitoring interface; it does not represent a completed or active multi-worker run.*
 
 ## How a session moves through the system
 
@@ -94,6 +116,8 @@ flowchart TB
 ## Project status
 
 This is a local workflow prototype. The current implementation includes the control panel, process supervision, ticket-interface handlers and manual payment handoff. There is no verified public hosted application for this project.
+
+The dashboard display was reviewed in an isolated empty state for this showcase. The captures did not exercise a ticket-selection flow or checkout.
 
 ## About this repository
 
