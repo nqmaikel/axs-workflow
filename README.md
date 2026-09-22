@@ -123,4 +123,4 @@ The dashboard display was reviewed in an isolated empty state for this showcase.
 
 This repository presents the application and its architecture. The implementation, operational settings and private records remain private.
 
-**Last showcase review:** 2026-09-20 (Europe/Paris).
+**Last showcase review:** 2026-09-22 (Europe/Paris).
